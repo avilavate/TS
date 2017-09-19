@@ -4,7 +4,21 @@ function MyFunc(num) {
     }
     return null;
 }
+var f;
+f = function (x) { return x; };
+console.log(f("Avil"));
 console.log(MyFunc("avil avtae"));
+function f1(a, b) {
+    b = a;
+}
+function sendMessage(options) {
+    console.log("..........." + options.data);
+}
+var opt = {
+    name: "Avil",
+    data: "some data"
+};
+sendMessage(opt);
 var ABC = (function () {
     function ABC(Name) {
         var _this = this;

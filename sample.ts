@@ -5,7 +5,34 @@ function MyFunc<I>(num: I): string[] {
     return null;
 }
 
+let f: <T>(x: T) => T;
+f=x=>x;
+console.log(f<string>("Avil"));
 console.log(MyFunc<string>("avil avtae"));
+
+type A = <T, U>(x: T, y: U) => [T, U];
+type B = <S>(x: S, y: S) => [S, S];
+
+function f1(a: A, b: B) {
+    //a = b;  // Error
+    b = a;  // Ok
+}
+//Week type detection:
+
+interface Options {
+    data?: string,
+    timeout?: number,
+    maxRetries?: number,
+}
+function sendMessage(options: Options) {
+   console.log("..........."+options.data);
+}
+let opt={
+    name:"Avil",
+    data:"some data"
+};
+sendMessage(opt);
+
 class ABC {
     constructor(private Name: string) {
 
