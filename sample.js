@@ -27,12 +27,12 @@ var ABC = (function () {
             console.log(_this.Name);
         };
         this.someException = function () {
-            var input = " ....";
             try {
+                var input = " ....";
                 JSON.parse(input);
             }
             catch (_a) {
-                console.log("Invalid JSON given\n\n" + input);
+                console.log("Invalid JSON given: " + input);
             }
         };
         this.someEnum = function () {
@@ -75,4 +75,10 @@ var GenericClass = (function () {
 ;
 var objGeneric = new GenericClass(657);
 console.dir(objGeneric.getType());
+var a = {};
+(function (a) {
+    a.Name = "Avil";
+    a.Address = "Bangalore";
+}(a));
+console.dir(a);
 //# sourceMappingURL=sample.js.map

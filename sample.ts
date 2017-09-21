@@ -49,7 +49,7 @@ class ABC {
         }
         catch {
             // ^ Notice that our `catch` clause doesn't declare a variable.
-            console.log("Invalid JSON given\n\n" + input)
+            console.log("Invalid JSON given: " + input)
         }
     }
     someEnum = () => {
@@ -82,10 +82,7 @@ class GenericClass<T>{
     private _Type: string;
     private PassedValue: T;
     constructor(private passedType: T) {
-        if (typeof (this.passedType) == typeof ("abc"))
-            this._Type = "string";
-
-
+        if (typeof (this.passedType) == typeof ("abc")) this._Type = "string";
         if (typeof (this.passedType) == typeof (12)) this._Type = "number";
         if (typeof (this.passedType) == typeof ({})) this._Type = "Object";
 
@@ -96,3 +93,10 @@ class GenericClass<T>{
 
 var objGeneric = new GenericClass<number>(657);
 console.dir(objGeneric.getType());
+let a:any =  {};
+(function (a) {
+    a.Name = "Avil";
+    a.Address = "Bangalore";
+}(a));
+
+console.dir(a);
