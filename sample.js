@@ -57,4 +57,22 @@ var objABC = new ABC("Avil Avate");
 objABC.getName();
 objABC.someException();
 objABC.someEnum();
+var GenericClass = (function () {
+    function GenericClass(passedType) {
+        var _this = this;
+        this.passedType = passedType;
+        this.getType = function () { return _this._Type + " : " + _this.PassedValue; };
+        if (typeof (this.passedType) == typeof ("abc"))
+            this._Type = "string";
+        if (typeof (this.passedType) == typeof (12))
+            this._Type = "number";
+        if (typeof (this.passedType) == typeof ({}))
+            this._Type = "Object";
+        this.PassedValue = passedType;
+    }
+    return GenericClass;
+}());
+;
+var objGeneric = new GenericClass(657);
+console.dir(objGeneric.getType());
 //# sourceMappingURL=sample.js.map

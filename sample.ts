@@ -6,7 +6,7 @@ function MyFunc<I>(num: I): string[] {
 }
 
 let f: <T>(x: T) => T;
-f=x=>x;
+f = x => x;
 console.log(f<string>("Avil"));
 console.log(MyFunc<string>("avil avtae"));
 
@@ -25,11 +25,11 @@ interface Options {
     maxRetries?: number,
 }
 function sendMessage(options: Options) {
-   console.log("..........."+options.data);
+    console.log("..........." + options.data);
 }
-let opt={
-    name:"Avil",
-    data:"some data"
+let opt = {
+    name: "Avil",
+    data: "some data"
 };
 sendMessage(opt);
 
@@ -75,3 +75,24 @@ let objABC = new ABC("Avil Avate");
 objABC.getName();
 objABC.someException();
 objABC.someEnum();
+
+//Generic Sample
+
+class GenericClass<T>{
+    private _Type: string;
+    private PassedValue: T;
+    constructor(private passedType: T) {
+        if (typeof (this.passedType) == typeof ("abc"))
+            this._Type = "string";
+
+
+        if (typeof (this.passedType) == typeof (12)) this._Type = "number";
+        if (typeof (this.passedType) == typeof ({})) this._Type = "Object";
+
+        this.PassedValue = passedType;
+    }
+    getType = (): string => this._Type + " : " + this.PassedValue;
+};
+
+var objGeneric = new GenericClass<number>(657);
+console.dir(objGeneric.getType());
