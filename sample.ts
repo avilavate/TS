@@ -8,7 +8,7 @@ function MyFunc<I>(num: I): string[] {
 let f: <T>(x: T) => T;
 f = x => x;
 console.log(f<string>("Avil"));
-console.log(MyFunc<string>("avil avtae"));
+console.log(MyFunc<string>("avil avate"));
 
 type A = <T, U>(x: T, y: U) => [T, U];
 type B = <S>(x: S, y: S) => [S, S];

@@ -7,7 +7,7 @@ function MyFunc(num) {
 var f;
 f = function (x) { return x; };
 console.log(f("Avil"));
-console.log(MyFunc("avil avtae"));
+console.log(MyFunc("avil avate"));
 function f1(a, b) {
     b = a;
 }
