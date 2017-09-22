@@ -7,14 +7,15 @@
         "sourceMap": true
     },
     "include": [
-        "NG2/**/*.ts"
+        "./**/*.ts"
     ],
-    "files": [
-        "sample.ts",
-        "./Shapes/IShape.ts",
-        "./Shapes/Circle.ts",
-        "./Shapes/Client.ts"
-    ],
+    // "files": [
+    //     "./Shapes/*.ts",
+    //     "sample.ts",
+    //     "./Shapes/IShape.ts",
+    //     "./Shapes/Circle.ts",
+    //     "./Shapes/Client.ts"
+    // ],
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
