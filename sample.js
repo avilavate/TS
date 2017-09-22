@@ -27,8 +27,8 @@ var ABC = (function () {
             console.log(_this.Name);
         };
         this.someException = function () {
+            var input = " ....";
             try {
-                var input = " ....";
                 JSON.parse(input);
             }
             catch (_a) {

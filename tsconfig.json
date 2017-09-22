@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
@@ -10,7 +10,10 @@
         "NG2/**/*.ts"
     ],
     "files": [
-        "sample.ts"
+        "sample.ts",
+        "./Shapes/IShape.ts",
+        "./Shapes/Circle.ts",
+        "./Shapes/Client.ts"
     ],
     "exclude": [
         "node_modules",

@@ -78,6 +78,8 @@ objABC.someEnum();
 
 //Generic Sample
 
+
+
 class GenericClass<T>{
     private _Type: string;
     private PassedValue: T;
