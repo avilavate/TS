@@ -1,5 +1,5 @@
 function MyFunc(num) {
-    if (typeof (num) == "string") {
+    if (typeof (num) === "string") {
         return num.split('');
     }
     return null;
@@ -62,11 +62,11 @@ var GenericClass = (function () {
         var _this = this;
         this.passedType = passedType;
         this.getType = function () { return _this._Type + " : " + _this.PassedValue; };
-        if (typeof (this.passedType) == typeof ("abc"))
+        if (typeof (this.passedType) === typeof ("abc"))
             this._Type = "string";
-        if (typeof (this.passedType) == typeof (12))
+        if (typeof (this.passedType) === typeof (12))
             this._Type = "number";
-        if (typeof (this.passedType) == typeof ({}))
+        if (typeof (this.passedType) === typeof ({}))
             this._Type = "Object";
         this.PassedValue = passedType;
     }

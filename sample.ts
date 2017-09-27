@@ -1,5 +1,5 @@
 function MyFunc<I>(num: I): string[] {
-    if (typeof (num) == "string") {
+    if (typeof (num) === "string") {
         return num.split('');
     }
     return null;
@@ -84,9 +84,9 @@ class GenericClass<T>{
     private _Type: string;
     private PassedValue: T;
     constructor(private passedType: T) {
-        if (typeof (this.passedType) == typeof ("abc")) this._Type = "string";
-        if (typeof (this.passedType) == typeof (12)) this._Type = "number";
-        if (typeof (this.passedType) == typeof ({})) this._Type = "Object";
+        if (typeof (this.passedType) === typeof ("abc")) this._Type = "string";
+        if (typeof (this.passedType) === typeof (12)) this._Type = "number";
+        if (typeof (this.passedType) === typeof ({})) this._Type = "Object";
 
         this.PassedValue = passedType;
     }

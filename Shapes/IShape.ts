@@ -5,5 +5,6 @@ export interface IShape{
     radius?:number;
     area():number;
     volume?:()=>number;
+    id:number;
 }
 
