@@ -9,6 +9,6 @@ use sampledb;
 
 
 insert into Persons (PersonID, LastName, FirstName,
-Address, City) VALUES(0,'A','A','Bang','KA');
+Address, City) VALUES(1,'A','A','Bang','KA');
 
 select * from Persons;
